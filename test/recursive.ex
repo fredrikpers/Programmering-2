@@ -39,4 +39,15 @@ defmodule Recursive do
                 product(x, exp(x, n-1))
         end
     end
+
+    def exp_built_in(x, n) do
+        cond do
+            n == 1 ->
+                x
+            rem(n,2) == 0 -> 
+                exp_built_in(x, div(n,2)) * exp_built_in(x, div(n,2))
+            rem(n,2) == 1 ->
+                exp_built_in(x, n-1) * x        
+        end
+    end    
 end
