@@ -5,7 +5,8 @@ defmodule Recursive do
             0
         else
             n + product(m-1, n)
-        end
+        end 
+        
     end
 
     def product_case(m,n) do
