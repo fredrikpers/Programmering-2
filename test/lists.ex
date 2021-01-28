@@ -28,7 +28,7 @@ defmodule Lists do
 
     #Length of the list version 2
     def len2([]) do 0 end
-    def len2([_head | tail]) do 1 + len(tail) end
+    def len2([_head | tail]) do 1 + len2(tail) end
     
     #Returns the sum of all elements in a list
     def sum(l) do
