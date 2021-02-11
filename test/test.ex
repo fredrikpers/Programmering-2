@@ -20,4 +20,11 @@ defmodule Test do
       r*r*:math.pi
       end
 
+      def sum([]) do 0 end
+      def sum([h | t]) do h + sum(t) end
+
+      def reverse ([]) do [] end
+      def reverse([h | t]) do
+        reverse(t) ++ [h]
+      end
 end
