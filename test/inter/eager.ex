@@ -27,12 +27,12 @@ defmodule Eager do
         end
     end
 
-    def eval_expr({:lambda, par, free, seq}, env) do
-        case Env.closure(free, env) do
-            :error -> :error
-            closure -> {:ok {:closure, par, seq, env}}
-        end
-    end
+ #   def eval_expr({:lambda, par, free, seq}, env) do
+ #       case Env.closure(free, env) do
+ #           :error -> :error
+ #           closure -> {:ok {:closure, par, seq, env}}
+ #       end
+ #   end
 
 #Evaluate Matching
 
