@@ -114,15 +114,4 @@ defmodule Exam do
     n * fac(n - 1)
   end
 
-  def fizzbuzz(n) do
-    fizzbuzz(1, n + 1, 1, 1)
-  end
-
-  def fizzbuzz(x, x, _, _) do [] end
-  def fizzbuzz(a, b, 3, 5) do [:fizzbuzz | fizzbuzz(a + 1, b, 1, 1)] end
-  def fizzbuzz(a, b, 3, div5) do [:fizz | fizzbuzz(a + 1, b, 1, div5 + 1)] end
-  def fizzbuzz(a, b, div3, 5) do [:buzz | fizzbuzz(a + 1, b, div3 + 1, 1)] end
-  def fizzbuzz(a, b, div3, div5) do [a | fizzbuzz(a + 1, b, div3 + 1, div5 + 1)] end
-
-
 end
